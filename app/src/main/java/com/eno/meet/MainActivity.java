@@ -1,14 +1,16 @@
 package com.eno.meet;
 
-import android.os.Bundle;
+import com.eno.meet.base.BaseUIActivity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseUIActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int bindLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initData() {
+
     }
 }
