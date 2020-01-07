@@ -3,8 +3,7 @@ package com.eno.meet.base;
 import android.content.Intent;
 
 import com.eno.framework.base.BaseActivity;
-import com.eno.framework.utils.SPUtils;
-import com.eno.meet.common.AppConfig;
+import com.eno.framework.bmob.BmobManager;
 import com.eno.meet.ui.LoginActivity;
 
 /**
@@ -21,7 +20,7 @@ public abstract class BaseUIActivity extends BaseActivity {
 
     @Override
     protected boolean isLogin() {
-        return SPUtils.getBoolean(AppConfig.Sp.IS_LOGIN, false);
+        return BmobManager.getInstance().isLogin();
     }
 
     @Override

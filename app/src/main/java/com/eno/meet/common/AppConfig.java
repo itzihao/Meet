@@ -21,6 +21,7 @@ public class AppConfig {
     public static final class Sp {
         public static final String IS_FIRST_RUN_APP = "is_first_run_app";
         public static final String IS_LOGIN = "is_login";
+        public static final String PHONE = "phone";
     }
 
     /**

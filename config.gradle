@@ -20,5 +20,19 @@ ext {
             "gson"                : 'com.google.code.gson:gson:2.8.5',
             "butterknife"         : 'com.jakewharton:butterknife:10.1.0',
             "butterknife-compiler": 'com.jakewharton:butterknife-compiler:10.1.0',
+            "httpclient"          : 'org.apache.http.legacy',
+
+            "bmobsdk"             : 'cn.bmob.android:bmob-sdk:3.7.3-rc1',
+            "rxjava2"             : "io.reactivex.rxjava2:rxjava:2.2.3",
+            "rxandroid2"          : 'io.reactivex.rxjava2:rxandroid:2.1.0',
+            "okio"                : 'com.squareup.okio:okio:2.1.0',
+            "okhttp3"             : 'com.squareup.okhttp3:okhttp:3.12.0',
+
+    ]
+
+    maven = [
+            "bmobUrl": "https://raw.github.com/bmob/bmob-android-sdk/master",
+            "jitpack": "https://jitpack.io",
+            "bintray": "https://dl.bintray.com/hpdx/maven/"
     ]
 }

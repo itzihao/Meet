@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.eno.meet">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".MeetApplication"
@@ -25,6 +23,11 @@
         <meta-data
             android:name="notch.config"
             android:value="portrait|landscape" />
+
+        <!--Bmob-->
+        <provider
+            android:name="cn.bmob.v3.util.BmobContentProvider"
+            android:authorities="com.eno.meet.BmobContentProvider" />
 
         <activity android:name=".MainActivity" />
         <activity android:name=".ui.LoginActivity" />
