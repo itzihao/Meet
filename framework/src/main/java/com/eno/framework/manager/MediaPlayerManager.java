@@ -2,14 +2,12 @@ package com.eno.framework.manager;
 
 import android.content.res.AssetFileDescriptor;
 import android.media.MediaPlayer;
-import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
 
 import java.io.IOException;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 
 
 /**
@@ -19,16 +17,16 @@ import androidx.annotation.RequiresApi;
  */
 public class MediaPlayerManager {
 
-    private static final int MEDIA_STATUS_PLAY = 1;
-    private static final int MEDIA_STATUS_PAUSE = 2;
-    private static final int MEDIA_STATUS_STOP = 3;
+    public static final int MEDIA_STATUS_PLAY = 1;
+    public static final int MEDIA_STATUS_PAUSE = 2;
+    public static final int MEDIA_STATUS_STOP = 3;
 
     private static int MEDIA_STATUS = MEDIA_STATUS_STOP;
 
     private static final int H_PROGRESS = 1000;
 
 
-    public onMusicProgressListener mOnMusicProgressListener;
+    private onMusicProgressListener mOnMusicProgressListener;
 
     private MediaPlayer mMediaPlayer;
 
@@ -76,11 +74,10 @@ public class MediaPlayerManager {
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
-    public void startPlay(final @NonNull AssetFileDescriptor afd) {
+    public void startPlay(final @NonNull AssetFileDescriptor asset) {
         try {
             mMediaPlayer.reset();
-            mMediaPlayer.setDataSource(afd);
+            mMediaPlayer.setDataSource(asset.getFileDescriptor(), asset.getStartOffset(), asset.getLength());
             mMediaPlayer.prepare();
             mMediaPlayer.start();
             MEDIA_STATUS = MEDIA_STATUS_PLAY;

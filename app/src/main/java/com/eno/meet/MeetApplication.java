@@ -2,6 +2,7 @@ package com.eno.meet;
 
 import android.app.Application;
 
+import com.eno.framework.utils.LogUtils;
 import com.eno.framework.utils.SPUtils;
 
 /**
@@ -19,5 +20,6 @@ public class MeetApplication extends Application {
 
     private void initData() {
         SPUtils.init(this);
+        LogUtils.logInit();
     }
 }

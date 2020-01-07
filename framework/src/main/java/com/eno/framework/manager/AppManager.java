@@ -61,9 +61,10 @@ public class AppManager {
     /**
      * 结束当前Activity（堆栈中最后一个压入的）
      */
-    public void finishActivity(Context context) {
+    public void finishActivity() {
+        LogUtils.logE("sActivityStack " + sActivityStack.size());
         try {
-            if (sActivityStack.size() > 1) {
+            if (sActivityStack.size() > 0) {
                 Activity activity = sActivityStack.lastElement();
                 LogUtils.logE("finishActivity Name :" + sActivityStack.get(sActivityStack.size() - 1).getClass().getSimpleName() + "    size :" + getAcitivitySize());
                 sActivityStack.remove(sActivityStack.size() - 1);

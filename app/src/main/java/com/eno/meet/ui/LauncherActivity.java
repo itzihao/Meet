@@ -1,7 +1,6 @@
 package com.eno.meet.ui;
 
 import android.os.Handler;
-import android.os.Message;
 
 import com.eno.framework.utils.SPUtils;
 import com.eno.meet.MainActivity;
@@ -20,14 +19,11 @@ public class LauncherActivity extends BaseUIActivity {
 
     public static final int SKIP_MAIN = 1000;
 
-    private Handler mHandle = new Handler(new Handler.Callback() {
-        @Override
-        public boolean handleMessage(final Message msg) {
-            if (msg.what == SKIP_MAIN) {
-                toNextActivity();
-            }
-            return false;
+    private Handler mHandle = new Handler(msg -> {
+        if (msg.what == SKIP_MAIN) {
+            toNextActivity();
         }
+        return false;
     });
 
     @Override

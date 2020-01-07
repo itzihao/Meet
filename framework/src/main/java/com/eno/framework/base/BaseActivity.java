@@ -38,9 +38,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         setContentView(mView);
 
         mActivity = this;
-
         AppManager.getAppManager().addActivity(mActivity);
-
         ButterKnife.bind(this);
 
         initData();
@@ -94,7 +92,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     public void backActivity() {
-        AppManager.getAppManager().finishActivity(mActivity);
+        AppManager.getAppManager().finishActivity();
     }
 
 
@@ -126,4 +124,5 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
         startActivityForResult(intent, requestCode);
     }
+
 }
