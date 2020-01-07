@@ -11,6 +11,7 @@ import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import com.eno.framework.event.EventManager;
 import com.eno.framework.manager.AppManager;
 import com.eno.framework.utils.SystemUI;
 import com.eno.framework.utils.ToastUtils;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.ButterKnife;
 
@@ -53,7 +55,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         mActivity = this;
         AppManager.getAppManager().addActivity(mActivity);
         ButterKnife.bind(this);
-
+        EventManager.register(this);
         initData();
     }
 
@@ -71,7 +73,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         ToastUtils.showToast(strMsg);
     }
 
-    protected void showToast(int resId) {
+    protected void showToast(@StringRes int resId) {
         showToast(getString(resId));
     }
 
@@ -272,5 +274,12 @@ public abstract class BaseActivity extends AppCompatActivity {
         Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION
                 , Uri.parse("package:" + getPackageName()));
         startActivityForResult(intent, PERMISSION_WINDOW_REQUEST_CODE);
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventManager.unregister(this);
     }
 }
