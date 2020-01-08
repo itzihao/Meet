@@ -37,34 +37,26 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_main_star"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
+            style="@style/style_tv_main"
+            android:drawableTop="@drawable/select_img_star"
             android:text="@string/text_main_star" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_main_square"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
+            style="@style/style_tv_main"
+            android:drawableTop="@drawable/select_img_square"
             android:text="@string/text_main_square" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_main_chat"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
+            style="@style/style_tv_main"
+            android:drawableTop="@drawable/select_img_chat"
             android:text="@string/text_main_chat" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_main_mine"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
+            style="@style/style_tv_main"
+            android:drawableTop="@drawable/select_img_mine"
             android:text="@string/text_main_me" />
     </LinearLayout>
 

@@ -1,0 +1,85 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="item_0dp">0dp</dimen>
+    <dimen name="item_1dp">1dp</dimen>
+    <dimen name="item_2dp">2dp</dimen>
+    <dimen name="item_3dp">3dp</dimen>
+    <dimen name="item_4dp">4dp</dimen>
+    <dimen name="item_5dp">5dp</dimen>
+    <dimen name="item_6dp">6dp</dimen>
+    <dimen name="item_8dp">8dp</dimen>
+    <dimen name="item_10dp">10dp</dimen>
+    <dimen name="item_12dp">12dp</dimen>
+    <dimen name="item_15dp">15dp</dimen>
+    <dimen name="item_16dp">16dp</dimen>
+    <dimen name="item_18dp">18dp</dimen>
+    <dimen name="item_20dp">20dp</dimen>
+    <dimen name="item_22dp">22dp</dimen>
+    <dimen name="item_24dp">24dp</dimen>
+    <dimen name="item_26dp">26dp</dimen>
+    <dimen name="item_28dp">28dp</dimen>
+    <dimen name="item_30dp">30dp</dimen>
+    <dimen name="item_32dp">32dp</dimen>
+    <dimen name="item_36dp">36dp</dimen>
+    <dimen name="item_38dp">38dp</dimen>
+    <dimen name="item_40dp">40dp</dimen>
+    <dimen name="item_42dp">42dp</dimen>
+    <dimen name="item_44dp">44dp</dimen>
+    <dimen name="item_45dp">46dp</dimen>
+    <dimen name="item_48dp">48dp</dimen>
+    <dimen name="item_50dp">50dp</dimen>
+    <dimen name="item_52dp">52dp</dimen>
+    <dimen name="item_56dp">56dp</dimen>
+    <dimen name="item_60dp">60dp</dimen>
+    <dimen name="item_62dp">62dp</dimen>
+    <dimen name="item_64dp">64dp</dimen>
+    <dimen name="item_65dp">66dp</dimen>
+    <dimen name="item_66dp">66dp</dimen>
+    <dimen name="item_68dp">68dp</dimen>
+    <dimen name="item_74dp">74dp</dimen>
+    <dimen name="item_76dp">76dp</dimen>
+    <dimen name="item_80dp">80dp</dimen>
+    <dimen name="item_88dp">88dp</dimen>
+    <dimen name="item_96dp">96dp</dimen>
+    <dimen name="item_100dp">100dp</dimen>
+    <dimen name="item_108dp">108dp</dimen>
+    <dimen name="item_110dp">110dp</dimen>
+    <dimen name="item_116dp">116dp</dimen>
+    <dimen name="item_120dp">120dp</dimen>
+    <dimen name="item_126dp">126dp</dimen>
+    <dimen name="item_128dp">128dp</dimen>
+    <dimen name="item_136dp">136dp</dimen>
+    <dimen name="item_140dp">140dp</dimen>
+    <dimen name="item_152dp">152dp</dimen>
+    <dimen name="item_168dp">168dp</dimen>
+    <dimen name="item_170dp">170dp</dimen>
+    <dimen name="item_180dp">180dp</dimen>
+    <dimen name="item_188dp">188dp</dimen>
+    <dimen name="item_200dp">200dp</dimen>
+    <dimen name="item_220dp">220dp</dimen>
+    <dimen name="item_228dp">228dp</dimen>
+    <dimen name="item_256dp">256dp</dimen>
+    <dimen name="item_260dp">260dp</dimen>
+    <dimen name="item_320dp">320dp</dimen>
+    <dimen name="item_512dp">512dp</dimen>
+
+    <dimen name="bottom_height">@dimen/item_48dp</dimen>
+    <dimen name="title_height">@dimen/item_56dp</dimen>
+    <dimen name="tab_height">@dimen/item_40dp</dimen>
+    <dimen name="title_main_font_size">@dimen/font_size_large</dimen>
+    <dimen name="title_bar_height">24dp</dimen>
+
+    <dimen name="grid_expected_size">120dp</dimen>
+
+    <!--APP字体大小规范-->
+    <dimen name="font_size_min">12sp</dimen><!--最小号-->
+    <dimen name="font_size_tiny">14sp</dimen><!--超小号-->
+    <dimen name="font_size_small">16sp</dimen><!--小号-->
+    <dimen name="font_size_normal">18sp</dimen><!--正常号-->
+    <dimen name="font_size_normal_high">20sp</dimen><!--偏大号-->
+    <dimen name="font_size_large">22sp</dimen><!--大号-->
+    <dimen name="font_size_large_high">24sp</dimen><!--超大号-->
+    <dimen name="font_size_xlarge_high">28sp</dimen><!--特大号-->
+    <dimen name="font_size_super_xlarge_high">32sp</dimen><!--超大号-->
+
+</resources>

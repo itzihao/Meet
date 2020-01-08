@@ -11,7 +11,6 @@ import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 
-import com.eno.framework.event.EventManager;
 import com.eno.framework.manager.AppManager;
 import com.eno.framework.utils.SystemUI;
 import com.eno.framework.utils.ToastUtils;
@@ -55,7 +54,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         mActivity = this;
         AppManager.getAppManager().addActivity(mActivity);
         ButterKnife.bind(this);
-        EventManager.register(this);
+//        EventManager.register(this);
         initData();
     }
 
@@ -280,6 +279,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        EventManager.unregister(this);
+//        EventManager.unregister(this);
     }
 }

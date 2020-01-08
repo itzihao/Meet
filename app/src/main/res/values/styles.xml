@@ -15,4 +15,14 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="style_tv_main">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/select_tv_main_color</item>
+        <item name="android:textSize">@dimen/font_size_min</item>
+        <item name="android:padding">@dimen/item_6dp</item>
+    </style>
+
 </resources>

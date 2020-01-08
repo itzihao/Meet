@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.eno.meet">
 
-
     <application
         android:name=".MeetApplication"
         android:allowBackup="true"
@@ -12,19 +11,29 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
-
-        <!--适配全面屏OPPO-->
+        <activity android:name=".ui.ContactFeiendActivity"></activity>
+        <activity android:name=".ui.FirstUploadActivity" />
+        <activity android:name=".ui.ImagePreviewActivity" />
+        <activity android:name=".ui.LocationActivity" />
+        <activity android:name=".ui.MineInfoActivity" />
+        <activity android:name=".ui.NewFriendActivity" />
+        <activity android:name=".ui.NoticeActivity" />
+        <activity android:name=".ui.PrivateSetActivity" />
+        <activity android:name=".ui.PushSquareActivity" />
+        <activity android:name=".ui.QrCodeActivity" />
+        <activity android:name=".ui.SettingActivity" />
+        <activity android:name=".ui.ShareImgActivity" />
+        <activity android:name=".ui.UserInfoActivity" />
+        <activity android:name=".ui.ChatThemeActivity" />
+        <activity android:name=".ui.ChatInfoActivity" />
+        <activity android:name=".ui.ChatActivity" />
+        <activity android:name=".ui.AddFeiendActivity" /> <!-- 适配全面屏OPPO -->
         <meta-data
             android:name="android.max_aspect"
-            android:value="2.2" />
-
-        <!--小米适配-->
+            android:value="2.2" /> <!-- 小米适配 -->
         <meta-data
             android:name="notch.config"
-            android:value="portrait|landscape" />
-
-        <!--Bmob-->
+            android:value="portrait|landscape" /> <!-- Bmob -->
         <provider
             android:name="cn.bmob.v3.util.BmobContentProvider"
             android:authorities="com.eno.meet.BmobContentProvider" />

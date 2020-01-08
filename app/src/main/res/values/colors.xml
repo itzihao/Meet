@@ -3,4 +3,34 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhiteHalf">#CDFFFFFF</color>
+    <color name="colorBlack">#FF000000</color>
+    <color name="colorBlackText">#FF333333</color>
+    <color name="colorGray">#E6E7E7</color>
+    <color name="colorGrayAA">#FF9FA3A3</color>
+    <color name="colorRed">#F50222</color>
+    <color name="colorYellow">#eb6e1a</color>
+    <color name="colorTransparent">#7f000000</color>
+    <color name="colorLightGrey">#F0E6E6</color>
+    <color name="colorLight">#80bfbcbc</color>
+    <color name="colorGrey">#88848484</color>
+    <color name="color84">#848484</color>
+    <color name="colorED">#EDEDED</color>
+    <color name="colorGrey8">#575757</color>
+    <color name="colorWhiteSmoke">#F5F5F5</color>
+    <color name="colorGreen">#5EBE13</color>
+    <color name="colorTitlebar">#25B7FF</color>
+    <color name="colorTitleItem">#5abeef</color>
+    <color name="colorF8">#F8F8F8</color>
+    <color name="color8A">#8A8A8A</color>
+    <color name="colorF6">#F6F6F6</color>
+    <color name="color7D">#7D7D7D</color>
+    <color name="color66">#666666</color>
+    <color name="colorBF">#BFBFBF</color>
+    <color name="colorDD">#DDDDDD</color>
+    <color name="color24">#242424</color>
+    <color name="color33">#333333</color>
+
 </resources>

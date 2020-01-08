@@ -4,24 +4,12 @@ import android.os.Bundle;
 
 import com.eno.framework.base.BaseFragment;
 
-import androidx.fragment.app.Fragment;
-
 /**
  * Created by Hao on 2020-01-07.
  * Email:itzihao@sina.com
  * TODO
  */
 public abstract class BaseUIFragment extends BaseFragment {
-
-    @Override
-    public Fragment newInstance() {
-        return null;
-    }
-
-    @Override
-    public Fragment newInstance(final Bundle bundle) {
-        return null;
-    }
 
     @Override
     public int bindLayoutId() {

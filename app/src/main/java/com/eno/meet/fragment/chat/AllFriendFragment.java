@@ -7,8 +7,7 @@ import androidx.fragment.app.Fragment;
 
 public class AllFriendFragment extends BaseUIFragment {
 
-    @Override
-    public Fragment newInstance() {
+    public static Fragment newInstance() {
         AllFriendFragment allFriendFragment = new AllFriendFragment();
         return allFriendFragment;
     }

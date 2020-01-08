@@ -9,8 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.eno.framework.event.EventManager;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
@@ -33,10 +31,6 @@ public abstract class BaseFragment extends Fragment {
     //是否是第一次开启网络加载
     public boolean isFirst;
 
-    public abstract Fragment newInstance();
-
-    public abstract Fragment newInstance(final Bundle bundle);
-
     @Nullable
     @Override
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
@@ -44,7 +38,7 @@ public abstract class BaseFragment extends Fragment {
             rootView = inflater.inflate(bindLayoutId(), container, false);
         mUnbinder = ButterKnife.bind(this, rootView);
         mActivity = (BaseActivity) getActivity();
-        EventManager.register(this);
+//        EventManager.register(this);
         Bundle bundle = getArguments();
         if (bundle != null) {
             initView(bundle);
@@ -149,7 +143,7 @@ public abstract class BaseFragment extends Fragment {
         if (mUnbinder != null) {
             mUnbinder.unbind();
         }
-        EventManager.unregister(this);
+//        EventManager.unregister(this);
     }
 
 

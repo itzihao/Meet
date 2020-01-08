@@ -42,8 +42,7 @@ public class LauncherActivity extends BaseUIActivity {
             SPUtils.putBoolean(AppConfig.Sp.IS_FIRST_RUN_APP, false);
             startActivityFinishSelf(GuideActivity.class);
         } else {
-            boolean isLogin = SPUtils.getBoolean(AppConfig.Sp.IS_LOGIN, false);
-            if (isLogin) {
+            if (isLogin()) {
                 startActivityFinishSelf(MainActivity.class);
             } else {
                 toLoginActivity();

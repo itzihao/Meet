@@ -1,5 +1,6 @@
 package com.eno.meet.fragment;
 
+import com.eno.meet.R;
 import com.eno.meet.base.BaseUIFragment;
 
 import androidx.fragment.app.Fragment;
@@ -7,15 +8,14 @@ import androidx.fragment.app.Fragment;
 
 public class MineFragment extends BaseUIFragment {
 
-    @Override
-    public Fragment newInstance() {
+    public static Fragment newInstance() {
         MineFragment fragment = new MineFragment();
         return fragment;
     }
 
     @Override
     public int bindLayoutId() {
-        return 0;
+        return R.layout.fragment_mine;
     }
 
     @Override
