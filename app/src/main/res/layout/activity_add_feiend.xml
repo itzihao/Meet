@@ -6,4 +6,78 @@
     android:layout_height="match_parent"
     tools:context=".ui.AddFeiendActivity">
 
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_52dp"
+        android:background="@color/colorPrimary"
+        android:drawableStart="@drawable/img_contact_icon"
+        android:drawablePadding="@dimen/item_12dp"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/item_16dp"
+        android:text="@string/text_add_friend_contact"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_phone"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/login_edit_bg"
+            android:hint="@string/text_login_phone"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingStart="@dimen/item_6dp"
+            android:textSize="14sp"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_search"
+            android:layout_width="@dimen/item_48dp"
+            android:layout_height="@dimen/item_32dp"
+            android:layout_marginEnd="@dimen/item_12dp"
+            android:src="@drawable/img_search" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mSearchResultView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_search" />
+
+    <include
+        android:id="@+id/include_empty_view"
+        layout="@layout/layout_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_search"
+        tools:visibility="visible" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

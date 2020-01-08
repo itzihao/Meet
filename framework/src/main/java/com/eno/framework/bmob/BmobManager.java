@@ -2,11 +2,17 @@ package com.eno.framework.bmob;
 
 import android.content.Context;
 
+import java.io.File;
+
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobSMS;
 import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.datatype.BmobFile;
+import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.LogInListener;
 import cn.bmob.v3.listener.QueryListener;
+import cn.bmob.v3.listener.UpdateListener;
+import cn.bmob.v3.listener.UploadFileListener;
 
 /**
  * Created by Hao on 2020-01-07.
@@ -74,5 +80,60 @@ public class BmobManager {
      */
     public void signOrLoginByMobilePhone(String phone, String code, LogInListener<IMUser> listener) {
         BmobUser.signOrLoginByMobilePhone(phone, code, listener);
+    }
+
+
+    /**
+     * 上传头像
+     *
+     * @param nickName
+     * @param file
+     * @param listener
+     */
+    public void uploadFirstPhoto(final String nickName, File file, final OnUploadPhotoListener listener) {
+        /**
+         * 1.上传文件拿到地址
+         * 2.更新用户信息
+         */
+        final IMUser imUser = getUser();
+        //独立域名 设置 - 应用配置 - 独立域名 一年/100
+        //免费的办法： 使用我的Key
+        //你如果怕数据冲突
+        //解决办法：和我的类名不一样即可
+        final BmobFile bmobFile = new BmobFile(file);
+        bmobFile.uploadblock(new UploadFileListener() {
+            @Override
+            public void done(BmobException e) {
+                if (e == null) {
+                    //上传成功
+                    imUser.setNickName(nickName);
+                    imUser.setPhoto(bmobFile.getFileUrl());
+
+                    imUser.setTokenNickName(nickName);
+                    imUser.setTokenPhoto(bmobFile.getFileUrl());
+
+                    //更新用户信息
+                    imUser.update(new UpdateListener() {
+                        @Override
+                        public void done(BmobException e) {
+                            if (e == null) {
+                                listener.OnUpdateDone();
+                            } else {
+                                listener.OnUpdateFail(e);
+                            }
+                        }
+                    });
+                } else {
+                    listener.OnUpdateFail(e);
+                }
+            }
+        });
+    }
+
+    public interface OnUploadPhotoListener {
+
+        void OnUpdateDone();
+
+        void OnUpdateFail(BmobException e);
     }
 }

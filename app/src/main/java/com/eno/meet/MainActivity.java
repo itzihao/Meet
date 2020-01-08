@@ -1,13 +1,25 @@
 package com.eno.meet;
 
+import android.content.Intent;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.ImageView;
 
+import com.eno.framework.bmob.BmobManager;
+import com.eno.framework.bmob.IMUser;
+import com.eno.framework.bmob.SimulationData;
+import com.eno.framework.manager.DialogManager;
 import com.eno.framework.utils.LogUtils;
+import com.eno.framework.utils.SPUtils;
+import com.eno.framework.widget.DialogView;
 import com.eno.meet.base.BaseUIActivity;
+import com.eno.meet.common.AppConfig;
 import com.eno.meet.fragment.ChatFragment;
 import com.eno.meet.fragment.MineFragment;
 import com.eno.meet.fragment.SquareFragment;
 import com.eno.meet.fragment.StarFragment;
+import com.eno.meet.service.CloudService;
+import com.eno.meet.ui.FirstUploadActivity;
 
 import java.util.List;
 
@@ -37,6 +49,7 @@ public class MainActivity extends BaseUIActivity {
     private FragmentTransaction mSquareTransaction;
     private FragmentTransaction mChatTransaction;
     private FragmentTransaction mMineTransaction;
+    private DialogView mUploadView;
 
     @Override
     protected int bindLayoutId() {
@@ -48,7 +61,46 @@ public class MainActivity extends BaseUIActivity {
         requestPermiss();
         initFragment();
         checkMainTab(0);
+        checkToken();
+
+        SimulationData.testData();
     }
+
+    private void checkToken() {
+        String token = SPUtils.getString(AppConfig.Sp.TOKEN, "");
+        if (TextUtils.isEmpty(token)) {
+            IMUser imUser = BmobManager.getInstance().getUser();
+            if (!TextUtils.isEmpty(imUser.getTokenNickName()) && !TextUtils.isEmpty(imUser.getTokenPhoto())) {
+                createToken();
+            } else {
+                createUpLoadDialog();
+            }
+        } else {
+            startCloudService();
+        }
+    }
+
+
+    private void createToken() {
+
+    }
+
+
+    private void createUpLoadDialog() {
+        mUploadView = DialogManager.getInstance().initView(this, R.layout.dialog_first_upload);
+        //外部点击不能消息
+        mUploadView.setCancelable(false);
+        ImageView iv_go_upload = mUploadView.findViewById(R.id.iv_go_upload);
+        iv_go_upload.setOnClickListener(view -> startActivity(FirstUploadActivity.class));
+        DialogManager.getInstance().show(mUploadView);
+    }
+
+
+    private void startCloudService() {
+        startService(new Intent(mActivity, CloudService.class));
+        // TODO: 2020-01-08 检测更新升级
+    }
+
 
     /**
      * 请求权限
