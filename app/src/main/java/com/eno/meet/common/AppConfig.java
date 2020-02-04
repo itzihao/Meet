@@ -13,6 +13,11 @@ public class AppConfig {
         public static final String KEY_POS_INDEX = "key_pos_index";
         public static final String KEY_ORDER_INDEX = "key_order_index";
         public static final String KEY_ORDER_TYPE = "key_order_type";
+        public static final String KEY_USER_ID = "key_user_id";
+        public static final String KEY_USER_NICKNAME = "key_user_nickname";
+        public static final String KEY_USER_PHOTO = "key_user_photo";
+        public static final String INTENT_IMAGE_TYPE = "intent_image_type";
+        public static final String INTENT_IMAGE_URL = "intent_image_url";
     }
 
     /**

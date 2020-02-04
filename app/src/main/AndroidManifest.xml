@@ -27,7 +27,7 @@
         <activity android:name=".ui.ChatThemeActivity" />
         <activity android:name=".ui.ChatInfoActivity" />
         <activity android:name=".ui.ChatActivity" />
-        <activity android:name=".ui.AddFeiendActivity" /> <!-- 适配全面屏OPPO -->
+        <activity android:name=".ui.AddFriendActivity" /> <!-- 适配全面屏OPPO -->
         <meta-data
             android:name="android.max_aspect"
             android:value="2.2" /> <!-- 小米适配 -->

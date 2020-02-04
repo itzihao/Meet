@@ -4,6 +4,7 @@ import android.content.Intent;
 
 import com.eno.framework.base.BaseActivity;
 import com.eno.framework.bmob.BmobManager;
+import com.eno.framework.bmob.IMUser;
 import com.eno.meet.ui.LoginActivity;
 
 /**
@@ -26,5 +27,9 @@ public abstract class BaseUIActivity extends BaseActivity {
     @Override
     protected void toLoginActivity() {
         startActivity(LoginActivity.class);
+    }
+
+    protected IMUser getUser() {
+        return BmobManager.getInstance().getUser();
     }
 }

@@ -1,9 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.eno.framework.widget.HeadZoomScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.UserInfoActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_320dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/img_user_info_bg" />
+
+            <RelativeLayout
+                android:id="@+id/ll_back"
+                android:layout_width="@dimen/item_80dp"
+                android:layout_height="@dimen/item_52dp"
+                android:paddingStart="@dimen/item_16dp"
+                android:paddingTop="@dimen/item_20dp"
+                android:paddingEnd="@dimen/item_12dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/img_back_white" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/img_upload_photo_bg" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_user_photo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FF4500"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/userInfoView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_add_friend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/login_btn_bg"
+            android:text="@string/text_user_add_friend"
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:id="@+id/ll_is_friend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/login_btn_bg"
+                android:text="@string/text_user_chat"
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="请将融云Key替换成自己申请的Key来体验语音通话和视频通话"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_audio_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/login_btn_bg"
+                android:text="@string/text_user_audio_chat"
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_video_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/login_btn_bg"
+                android:text="@string/text_user_video_chat"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</com.eno.framework.widget.HeadZoomScrollView>

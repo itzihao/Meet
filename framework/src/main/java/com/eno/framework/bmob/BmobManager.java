@@ -5,10 +5,12 @@ import android.content.Context;
 import java.io.File;
 
 import cn.bmob.v3.Bmob;
+import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.BmobSMS;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.datatype.BmobFile;
 import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.LogInListener;
 import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.UpdateListener;
@@ -128,6 +130,60 @@ public class BmobManager {
                 }
             }
         });
+    }
+
+
+    /**
+     * 根据电话号码查询用户
+     *
+     * @param phone
+     */
+    public void queryPhoneUser(String phone, FindListener<IMUser> listener) {
+        baseQuery("mobilePhoneNumber", phone, listener);
+    }
+
+    /**
+     * 查询所有的用户
+     *
+     * @param listener
+     */
+    public void queryAllUser(FindListener<IMUser> listener) {
+        BmobQuery<IMUser> query = new BmobQuery<>();
+        query.findObjects(listener);
+    }
+
+    /**
+     * 根据objectId查询用户
+     *
+     * @param objectId
+     * @param listener
+     */
+    public void queryObjectIdUser(String objectId, FindListener<IMUser> listener) {
+        baseQuery("objectId", objectId, listener);
+    }
+
+    /**
+     * 查询基类
+     *
+     * @param key
+     * @param values
+     * @param listener
+     */
+    public void baseQuery(String key, String values, FindListener<IMUser> listener) {
+        BmobQuery<IMUser> query = new BmobQuery<>();
+        query.addWhereEqualTo(key, values);
+        query.findObjects(listener);
+    }
+
+    /**
+     * 查询我的好友
+     *
+     * @param listener
+     */
+    public void queryMyFriends(FindListener<Friend> listener) {
+        BmobQuery<Friend> query = new BmobQuery<>();
+        query.addWhereEqualTo("user", getUser());
+        query.findObjects(listener);
     }
 
     public interface OnUploadPhotoListener {

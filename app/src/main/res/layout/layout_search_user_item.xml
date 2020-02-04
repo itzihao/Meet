@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_80dp"
+    android:background="@android:color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/item_16dp"
+    android:paddingRight="@dimen/item_16dp">
+
+    <RelativeLayout
+        android:layout_width="@dimen/item_60dp"
+        android:layout_height="@dimen/item_60dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            tools:src="@drawable/img_boy_icon" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                tools:text="NickName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                tools:text="Age" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_contact_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_contact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_contact_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                tools:text="phone" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            tools:text="Desc" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_right_arrow" />
+
+</LinearLayout>

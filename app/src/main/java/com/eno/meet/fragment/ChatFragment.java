@@ -10,8 +10,8 @@ public class ChatFragment extends BaseUIFragment {
 
 
     public static Fragment newInstance() {
-        ChatFragment fragment = new ChatFragment();
-        return fragment;
+        ChatFragment chatFragment = new ChatFragment();
+        return chatFragment;
     }
 
     @Override
