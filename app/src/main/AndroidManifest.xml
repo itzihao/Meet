@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.ContactFeiendActivity"></activity>
+        <activity android:name=".ui.ContactFeiendActivity" />
         <activity android:name=".ui.FirstUploadActivity" />
         <activity android:name=".ui.ImagePreviewActivity" />
         <activity android:name=".ui.LocationActivity" />

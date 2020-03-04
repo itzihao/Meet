@@ -28,7 +28,7 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/iv_photo"
-                android:layout_width="145d"
+                android:layout_width="145dp"
                 android:layout_height="145dp"
                 android:layout_centerInParent="true"
                 android:src="@mipmap/ic_launcher" />

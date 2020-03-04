@@ -6,6 +6,8 @@ import android.content.Context;
 
 import com.eno.framework.Framework;
 
+import androidx.multidex.MultiDex;
+
 /**
  * Created by Hao on 2020-01-06.
  * Email:itzihao@sina.com
@@ -35,6 +37,12 @@ public class MeetApplication extends Application {
             //Toast.makeText(this, "flavor:" + flavor, Toast.LENGTH_SHORT).show();
             Framework.getFramework().initFramework(this);
         }
+    }
+
+    @Override
+    protected void attachBaseContext(final Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
     }
 
     /**
