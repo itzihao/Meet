@@ -1,4 +1,2 @@
 include ':app', ':framework'
 rootProject.name='Meet'
-include ':libcall'
-include ':libim'

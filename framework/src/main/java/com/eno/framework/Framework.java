@@ -7,6 +7,8 @@ import com.eno.framework.utils.ContextUtils;
 import com.eno.framework.utils.LogUtils;
 import com.eno.framework.utils.SPUtils;
 
+import io.rong.imkit.RongIM;
+
 /**
  * Created by Hao on 2020-01-07.
  * Email:itzihao@sina.com
@@ -34,5 +36,6 @@ public class Framework {
         ContextUtils.init(mContext);
         LogUtils.logInit();
         BmobManager.getInstance().initBmob(mContext);
+        RongIM.init(mContext);
     }
 }

@@ -51,8 +51,9 @@ ext {
     ]
 
     maven = [
-            "bmobUrl": "https://raw.github.com/bmob/bmob-android-sdk/master",
-            "jitpack": "https://jitpack.io",
-            "bintray": "https://dl.bintray.com/hpdx/maven/"
+            "bmobUrl"  : "https://raw.github.com/bmob/bmob-android-sdk/master",
+            "jitpack"  : "https://jitpack.io",
+            "bintray"  : "https://dl.bintray.com/hpdx/maven/",
+            "rongcloud": "https://dl.bintray.com/rongcloud/maven",
     ]
 }
